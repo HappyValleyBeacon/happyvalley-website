@@ -9,7 +9,7 @@ backend:
   site_domain: happyvalleybeacon.com
 
 publish_mode: simple
-media_folder: static/uploads
+media_folder: unzipped/static/uploads
 public_folder: /uploads
 
 collections:
@@ -18,7 +18,7 @@ collections:
     files:
       - name: menu
         label: Food & Drink Menu
-        file: src/_data/menu.yaml
+        file: unzipped/src/_data/menu.yaml
         description: Everything on the Menu page. Drag rows to reorder.
         fields:
           - label: Sections
@@ -48,7 +48,7 @@ collections:
     files:
       - name: games
         label: Games & Pinball
-        file: src/_data/games.yaml
+        file: unzipped/src/_data/games.yaml
         description: The cabinets, the Neo Geo slots and the pinball lineup.
         fields:
           - {label: Intro paragraph, name: intro, widget: text}
@@ -87,7 +87,7 @@ collections:
     files:
       - name: pics
         label: Pics page gallery
-        file: src/_data/photos.yaml
+        file: unzipped/src/_data/photos.yaml
         description: The big gallery on the Pics page. Drag to reorder.
         fields:
           - label: Photos
@@ -101,7 +101,7 @@ collections:
               - {label: Tile size, name: size, widget: select, options: [square, wide, tall, big], default: square}
       - name: home
         label: Home page gallery
-        file: src/_data/photos_home.yaml
+        file: unzipped/src/_data/photos_home.yaml
         description: The smaller gallery on the home page.
         fields:
           - label: Photos
@@ -119,7 +119,7 @@ collections:
     files:
       - name: hours
         label: Opening hours
-        file: src/_data/hours.yaml
+        file: unzipped/src/_data/hours.yaml
         fields:
           - {label: Note under the hours, name: note, widget: string}
           - label: Days
@@ -132,7 +132,7 @@ collections:
               - {label: Hours, name: hours, widget: string}
       - name: site
         label: Contact & social
-        file: src/_data/site.yaml
+        file: unzipped/src/_data/site.yaml
         fields:
           - {label: Business name, name: name, widget: string}
           - {label: Footer tagline, name: tagline, widget: string}
