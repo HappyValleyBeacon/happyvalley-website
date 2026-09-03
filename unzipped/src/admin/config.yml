@@ -1,0 +1,145 @@
+# Happy Valley site editor.
+# Points at the live repo.
+#
+backend:
+  name: github
+  repo: HappyValleyBeacon/happyvalley-website
+  branch: main
+  base_url: https://api.netlify.com
+  site_domain: happyvalleybeacon.com
+
+publish_mode: simple
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  - name: menu
+    label: Menu
+    files:
+      - name: menu
+        label: Food & Drink Menu
+        file: src/_data/menu.yaml
+        description: Everything on the Menu page. Drag rows to reorder.
+        fields:
+          - label: Sections
+            name: sections
+            widget: list
+            label_singular: Section
+            summary: "{{fields.heading}}"
+            fields:
+              - {label: Section heading, name: heading, widget: string}
+              - {label: Anchor id, name: id, widget: string, required: false, hint: "Leave alone unless you know what it does."}
+              - {label: Note under the heading, name: note, widget: string, required: false}
+              - label: Items
+                name: items
+                widget: list
+                required: false
+                label_singular: Item
+                summary: "{{fields.name}} — {{fields.price}}"
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - {label: Description, name: description, widget: string, required: false}
+                  - {label: Price, name: price, widget: string, hint: "Include the $ sign, or use MP for market price."}
+                  - {label: Small tag, name: tag, widget: string, required: false, hint: "Optional, e.g. Mocktail."}
+              - {label: Free text block, name: prose, widget: text, required: false, hint: "Used for the Liquors list. HTML allowed."}
+
+  - name: games
+    label: Games
+    files:
+      - name: games
+        label: Games & Pinball
+        file: src/_data/games.yaml
+        description: The cabinets, the Neo Geo slots and the pinball lineup.
+        fields:
+          - {label: Intro paragraph, name: intro, widget: text}
+          - {label: Cabinets heading, name: cabinets_heading, widget: string}
+          - {label: Cabinets note, name: cabinets_note, widget: string}
+          - label: Arcade cabinets
+            name: cabinets
+            widget: list
+            label_singular: Cabinet
+            summary: "{{fields.name}} {{fields.year}}"
+            fields:
+              - {label: Game, name: name, widget: string}
+              - {label: Year, name: year, widget: string, hint: "Shown as typed, e.g. '87"}
+          - {label: Neo Geo cabinet title, name: neogeo_title, widget: string}
+          - label: Neo Geo games
+            name: neogeo
+            widget: list
+            label_singular: Game
+            summary: "{{fields.name}} {{fields.year}}"
+            fields:
+              - {label: Game, name: name, widget: string}
+              - {label: Year, name: year, widget: string}
+          - {label: Pinball heading, name: pinball_heading, widget: string}
+          - {label: Pinball note, name: pinball_note, widget: string}
+          - label: Pinball machines
+            name: pinball
+            widget: list
+            label_singular: Machine
+            summary: "{{fields.name}} {{fields.year}}"
+            fields:
+              - {label: Machine, name: name, widget: string}
+              - {label: Year, name: year, widget: string}
+
+  - name: photos
+    label: Photos
+    files:
+      - name: pics
+        label: Pics page gallery
+        file: src/_data/photos.yaml
+        description: The big gallery on the Pics page. Drag to reorder.
+        fields:
+          - label: Photos
+            name: gallery
+            widget: list
+            label_singular: Photo
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: Photo, name: image, widget: image, hint: "Drag in a photo, or pick one already uploaded. Big files are fine, they get resized automatically."}
+              - {label: Caption, name: caption, widget: string}
+              - {label: Tile size, name: size, widget: select, options: [square, wide, tall, big], default: square}
+      - name: home
+        label: Home page gallery
+        file: src/_data/photos_home.yaml
+        description: The smaller gallery on the home page.
+        fields:
+          - label: Photos
+            name: gallery
+            widget: list
+            label_singular: Photo
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: Photo, name: image, widget: image, hint: "Drag in a photo, or pick one already uploaded."}
+              - {label: Caption, name: caption, widget: string}
+              - {label: Tile size, name: size, widget: select, options: [square, wide], default: square}
+
+  - name: details
+    label: Hours & Details
+    files:
+      - name: hours
+        label: Opening hours
+        file: src/_data/hours.yaml
+        fields:
+          - {label: Note under the hours, name: note, widget: string}
+          - label: Days
+            name: days
+            widget: list
+            label_singular: Day
+            summary: "{{fields.day}} — {{fields.hours}}"
+            fields:
+              - {label: Day, name: day, widget: string}
+              - {label: Hours, name: hours, widget: string}
+      - name: site
+        label: Contact & social
+        file: src/_data/site.yaml
+        fields:
+          - {label: Business name, name: name, widget: string}
+          - {label: Footer tagline, name: tagline, widget: string}
+          - {label: Address, name: address, widget: string}
+          - {label: Phone, name: phone, widget: string}
+          - {label: Email, name: email, widget: string}
+          - {label: Instagram URL, name: instagram, widget: string}
+          - {label: TikTok URL, name: tiktok, widget: string}
+          - {label: Shop URL, name: shop_url, widget: string}
+          - {label: Copyright line, name: copyright, widget: string}

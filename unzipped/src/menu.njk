@@ -1,0 +1,55 @@
+---
+layout: "base.njk"
+title: "Menu: Cocktails, Draft Beer & Food | Happy Valley Arcade Bar, Beacon NY"
+activeNav: "menu"
+description: "Signature cocktails, 16 beers on tap, wine, zero-proof drinks and food at Happy Valley Arcade Bar on Main Street in Beacon, NY."
+permalink: "/menu-color.html"
+copyNote: ". Prices &amp; tap list subject to change."
+eleventyExcludeFromCollections: true
+---
+
+<section class="mhead">
+  <div class="wrap">
+    <span class="eyebrow">Eat · Drink · Play</span>
+    <h1>The Menu</h1>
+    <p>16 beers on tap, cosmic cocktails, NY-state spirits &amp; vegan-friendly bites. Tap list rotates weekly.</p>
+  </div>
+</section>
+
+<div class="jump">
+  <div class="wrap">
+    <a href="#draft">Draft Beer</a>
+    <a href="#cocktails">Cocktails</a>
+    <a href="#seasonal">Seasonal</a>
+    <a href="#na">Non-Alc</a>
+    <a href="#wine">Wine</a>
+    <a href="#cans">Cans</a>
+    <a href="#liquor">Liquors</a>
+    <a href="#food">Food</a>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+
+{%- for sec in menu.sections %}
+    <section class="cat"{% if sec.id %} id="{{ sec.id }}"{% endif %}>
+      <div class="cat-head"><h2>{{ sec.heading | safe }}</h2><div class="line"></div></div>
+      {%- if sec.note %}
+      <div class="cat-note">{{ sec.note | safe }}</div>
+      {%- endif %}
+      {%- if sec.items %}
+      <div class="items">
+        {%- for it in sec.items %}
+        <div class="item"><div class="info"><div class="nm">{{ it.name | safe }}{% if it.tag %} <span class="tagline">{{ it.tag | safe }}</span>{% endif %}</div>{% if it.description %}<div class="ds">{{ it.description | safe }}</div>{% endif %}</div><div class="pr">{{ it.price | safe }}</div></div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if sec.prose %}
+      <p class="listline">{{ sec.prose | safe }}</p>
+      {%- endif %}
+    </section>
+{%- endfor %}
+
+  </div>
+</main>

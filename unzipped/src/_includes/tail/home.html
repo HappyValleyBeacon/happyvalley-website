@@ -1,0 +1,43 @@
+<script>
+(function(){
+  var n=new Date(), d=n.getDay(), h=n.getHours()+n.getMinutes()/60;
+  var late=(d===5||d===6);                       // Fri or Sat
+  var range=late?'Noon – 1:30am':'Noon – 11pm';
+  var spill=((d===6||d===0)&&h<1.5);             // after-midnight belongs to prior late night
+  var openNow = spill || (h>=12 && (late || h<23));
+  var el=document.getElementById('oh-v');
+  if(el){el.innerHTML=range+'<small>'+(openNow?'Open now':'Closed · opens at noon')+'</small>';}
+})();
+</script>
+
+
+
+
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close photo viewer">&times;</button>
+  <div class="lb-fig">
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+    <img class="lb-img" id="lbImg" alt="">
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">&#8250;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var tiles=[].slice.call(document.querySelectorAll('.gal a[data-full]'));
+  if(!tiles.length)return;
+  var lb=document.getElementById('lb'), img=document.getElementById('lbImg'), i=0;
+  function show(n){i=(n+tiles.length)%tiles.length;var t=tiles[i];img.src=t.getAttribute('data-full');img.alt=t.getAttribute('aria-label')||'';}
+  function open(n){show(n);lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';img.src='';}
+  tiles.forEach(function(t,n){t.addEventListener('click',function(e){e.preventDefault();open(n);});});
+  document.getElementById('lbClose').addEventListener('click',close);
+  document.getElementById('lbPrev').addEventListener('click',function(e){e.stopPropagation();show(i-1);});
+  document.getElementById('lbNext').addEventListener('click',function(e){e.stopPropagation();show(i+1);});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(i-1);else if(e.key==='ArrowRight')show(i+1);
+  });
+})();
+</script>

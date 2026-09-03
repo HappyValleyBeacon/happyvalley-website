@@ -1,0 +1,19 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+pages:
+  - {loc: "/", pri: "1.0"}
+  - {loc: "/games-color", pri: "0.9"}
+  - {loc: "/menu-color", pri: "0.9"}
+  - {loc: "/events-color", pri: "0.8"}
+  - {loc: "/party-color", pri: "0.8"}
+  - {loc: "/pics-color", pri: "0.6"}
+  - {loc: "/mug-color", pri: "0.6"}
+  - {loc: "/store-color", pri: "0.5"}
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in pages %}
+  <url><loc>{{ site.url }}{{ p.loc }}</loc><priority>{{ p.pri }}</priority></url>
+{%- endfor %}
+</urlset>

@@ -1,0 +1,154 @@
+sections:
+- id: draft
+  heading: Draft Beer
+  note: 16 beers on tap — our list rotates weekly. Check the up-to-date board inside.
+  items:
+  - name: Grateful Dead
+    description: Juicy Pale Ale · 5.3% · Milton, DE
+    price: $9
+  - name: Sloop Juice Bomb
+    description: IPA · 6.5% · East Fishkill, NY
+    price: $10
+  - name: Industrial Arts Wrench
+    description: NEIPA · 7.1% · Beacon, NY
+    price: $10
+  - name: Hudson North Standard
+    description: Cider · 5% · Newburgh, NY
+    price: $9
+  - name: Narragansett
+    description: Lager · 5% · Providence, RI
+    price: $6
+  - name: Guinness
+    description: Dry Stout · 4.2% · Dublin
+    price: $9
+  - name: Allagash White
+    description: Wheat Beer · 5.2% · Portland, ME
+    price: $9
+  - name: Catskill Ball Lightning
+    description: Pilsner · 5.5% · Livingston Manor, NY
+    price: $9
+  - name: Hudson Valley — Rotating
+    description: Sour IPA · 5% · Beacon, NY
+    price: $10
+  - name: Miller High Life
+    description: American Lager · 4.6% · Milwaukee, WI
+    price: $6
+  - name: Rotating Selection
+    description: New beer, cider &amp; mead weekly — stop in!
+    price: MP
+  - name: Flight — pick any four (4oz)
+    description: Build your own tasting
+    price: $15
+- id: cocktails
+  heading: Signature Cocktails
+  items:
+  - name: Marge-A-Rita
+    description: Milagro Blanco, lime, blue curaçao, cherries
+    price: $14
+  - name: Sex on the Koopa Troopa Beach
+    description: Cranberry, grapefruit, pineapple, peach schnapps, Viskill Vodka
+    price: $15
+  - name: Rummy In My Tummy
+    description: Coconut rum, orange juice, peach schnapps
+    price: $12
+  - name: Rosemary's Baby
+    description: Great 9 Gin, lime, peach nectar, Pama, rosemary
+    price: $15
+- id: seasonal
+  heading: Seasonal Cocktails
+  items:
+  - name: Lavender Love
+    description: Empress Gin, lavender syrup, lemon, lemonade
+    price: MP
+  - name: Jigglypuff Juice
+    description: Espolòn, Campari, lime, agave, grapefruit
+    price: MP
+  - name: Sunshower
+    description: Malibu, amaretto, lemon, ginger beer
+    price: MP
+- id: na
+  heading: Non-Alcoholic Cocktails
+  note: All made with Lyre's 0%. Ask which signature cocktails we can make zero-proof!
+  items:
+  - name: Noloma
+    description: N/A tequila, lime, grapefruit, agave, club soda
+    price: $10
+  - name: Zero Spritz
+    description: N/A Aperol, N/A prosecco
+    price: $10
+  - name: APLOS Canned
+    description: Ume Spritz · Chili Margarita
+    price: $10
+  - name: Shark Bite
+    description: Gatorade, Sierra Mist, grenadine, shark gummy
+    price: $7
+- id: wine
+  heading: Wine &amp; Sake
+  items:
+  - name: Benmarl Marlboro Village Blush
+    price: $10
+  - name: Archer Roose Pinot Grigio
+    price: $10
+  - name: Benmarl Slate Hill Red
+    price: $10
+  - name: La Vigna Di Riva Prosecco
+    price: $10
+  - name: Archer Roose Sauv Blanc
+    price: $10
+  - name: Fre N/A Sauv Blanc
+    price: $7
+  - name: Fre N/A Cab Sav
+    price: $7
+- id: cans
+  heading: Canned Beer &amp; Cocktails
+  items:
+  - name: Pabst Blue Ribbon
+    description: 12oz · 4.8%
+    price: $4
+  - name: White Claw
+    description: 12oz · 5%
+    price: $7
+  - name: High Noon Vodka Soda
+    description: 12oz · 4.5%
+    price: $8
+  - name: Liquid Fables — The Boy Who Cried Wolf
+    description: Vodka strawberry mule · 5.5%
+    price: $7
+  - name: Liquid Fables — Town Mouse &amp; Country Mouse
+    description: Gin, blueberry &amp; basil · 6.5%
+    price: $7
+  - name: Rotating &amp; Seasonal Cans
+    description: Ask your bartender
+    price: MP
+- id: liquor
+  heading: Liquors
+  note: A full bar, plus a shelf devoted to New York State distilleries.
+  prose: "<b>Whiskey / Bourbon:</b> Jameson, Fireball, Bulleit Bourbon &amp; Rye, Maker's Mark, Cooperstown, Taconic Distillery Rye, Woodford Reserve<br>\n        <b>Scotch:</b> Glenlivet 12, Dewar's White Label, Macallan 12 Sherry Oak Single Malt<br>\n\
+    \        <b>Cognac:</b> Hennessy &nbsp;·&nbsp; <b>Rum:</b> Malibu, Goslings Dark<br>\n        <b>NY State:</b> Arrowood Vodka (Accord), ALB Pride Vodka (Albany), Denning's Point Great 9 Gin &amp; Viskill Vodka (Beacon), Tod &amp; Vixen Gin (Poughkeepsie),\
+    \ Hudson Bright Lights Big Bourbon (Gardiner), Cooperstown Select Blended Whiskey"
+- id: food
+  heading: Food
+  items:
+  - name: Mozzarella Sticks
+    price: $7
+  - name: Tater Tots
+    description: Free from eggs, fish, milk, peanuts, soy, tree nuts, wheat
+    price: $7
+  - name: Smiley Fries
+    price: $7
+    tag: Vegan
+  - name: Giant Pretzel
+    description: Served with Dijon or honey mustard
+    price: $9
+    tag: Vegan
+  - name: 10" Margherita Pizza
+    price: $12
+    tag: Veggie
+  - name: Vegan Chik'n Tenders
+    description: Dijon, honey mustard, Korean BBQ, or ketchup
+    price: $10
+  - name: Chicken Fingers
+    description: Dijon, honey mustard, Korean BBQ, or ketchup
+    price: $10
+  - name: Donuts from Glazed Over
+    price: $3

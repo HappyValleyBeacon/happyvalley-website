@@ -1,0 +1,60 @@
+---
+layout: "base.njk"
+title: "Arcade Games & Pinball | Happy Valley Arcade Bar, Beacon NY"
+activeNav: "games"
+description: "The full lineup at our Beacon arcade: 30 arcade cabinets from the golden age to modern hits, plus a rotating row of pinball machines."
+permalink: "/games-color.html"
+copyNote: "."
+eleventyExcludeFromCollections: true
+---
+
+<section class="mhead">
+  <div class="wrap">
+    <span class="eyebrow">The Floor</span>
+    <h1>Games</h1>
+    <p>{{ games.intro | safe }}</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="cat-head"><h2>Arcade Cabinets</h2><div class="line"></div></div>
+    <div class="cat-note">{{ games.cabinets_note | safe }}</div>
+    <div class="game-grid">
+      {%- for g in games.cabinets %}
+      <div class="game"><span class="nm">{{ g.name | safe }}</span><span class="yr">{{ g.year | safe }}</span></div>
+      {%- endfor %}
+      </div>
+      <div class="neo">
+        <div class="nm">{{ games.neogeo_title | safe }}</div>
+        <ul>
+          {%- for g in games.neogeo %}
+          <li><b>{{ g.name | safe }}</b> {{ g.year | safe }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="cat-head"><h2>Pinball</h2><div class="line"></div></div>
+    <div class="cat-note">{{ games.pinball_note | safe }}</div>
+    <div class="pin-grid">
+      {%- for g in games.pinball %}
+      <div class="pin"><div class="band"></div><div class="in"><h3>{{ g.name | safe }}</h3><span class="yr">{{ g.year | safe }}</span></div></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="cta-band">
+      <h3>Can't Wait? Play Online</h3>
+      <p>Fire up our Web Arcade from anywhere, then come settle the high score in person.</p>
+      <a class="btn solid" href="https://arcade.valley.games/">▶ Play the Web Arcade</a>
+    </div>
+  </div>
+</section>

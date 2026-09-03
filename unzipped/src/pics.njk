@@ -1,0 +1,33 @@
+---
+layout: "base.njk"
+title: "Photos | Happy Valley Arcade Bar, Beacon NY"
+activeNav: "pics"
+description: "Neon nights, arcade games, cocktails and the string-lit courtyard at Happy Valley Arcade Bar on Main Street in Beacon, NY."
+permalink: "/pics-color.html"
+copyNote: "."
+eleventyExcludeFromCollections: true
+---
+
+<section class="mhead">
+  <div class="wrap">
+    <span class="eyebrow">The Scene</span>
+    <h1>Pics</h1>
+    <p>Neon nights, glowing drinks, and the string-lit courtyard. Here's what a night at Happy Valley looks like.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="mosaic" id="mosaic">
+      {%- for ph in photos.gallery %}
+      <a class="g{% if ph.size != 'square' %} {{ ph.size }}{% endif %}" href="{{ ph.image | full }}" data-i="{{ loop.index0 }}" aria-label="{{ ph.caption }}" style="background-image:url({{ ph.image | thumb(ph.size) }})"></a>
+      {%- endfor %}
+    </div>
+
+    <div class="cta-band">
+      <h3>See More on Instagram</h3>
+      <p>We post event nights, new games, and daily good times over on Instagram. Come say hi.</p>
+      <a class="btn solid" href="https://www.instagram.com/happyvalleybeacon/" target="_blank" rel="noopener">Follow @happyvalleybeacon</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+gallery:
+- image: https://static.wixstatic.com/media/529210_4282f8477f714d8ebbee57d6e603c843~mv2.jpg
+  caption: The floor on a good night
+  size: wide
+- image: https://static.wixstatic.com/media/529210_08aa5eeaa0ab4a04a0487a6e36cdce01~mv2.png
+  caption: Cosmic cocktails, lined up
+  size: square
+- image: https://static.wixstatic.com/media/529210_4d4ea1704c794fb2bab116e5bf2e479c~mv2.png
+  caption: Balloons up, party on
+  size: square
+- image: https://static.wixstatic.com/media/90962f_46011d304b20420bba0fede403b5ed09~mv2.jpg
+  caption: Happy Huts, lit up
+  size: square
+- image: https://static.wixstatic.com/media/5a9531_aa3fded540954c4195ddf4ea8dfa8832~mv2.jpg
+  caption: Cabinets all the way down
+  size: square
+- image: https://static.wixstatic.com/media/529210_cc0eeff1213c46c0a7af27c2f879f1ac~mv2.png
+  caption: Courtyard at dusk
+  size: square
+- image: https://static.wixstatic.com/media/90962f_a82158faf5e844c5ac67bb431ff5f4da~mv2.jpg
+  caption: String lights over the courtyard
+  size: wide

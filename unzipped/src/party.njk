@@ -1,0 +1,114 @@
+---
+layout: "base.njk"
+title: "Private Parties & Buyouts | Happy Valley Arcade Bar, Beacon NY"
+activeNav: "party"
+description: "Book a birthday, wedding party or full buyout at Happy Valley Arcade Bar in Beacon, NY. Tell us what you're planning and we'll make it happen."
+permalink: "/party-color.html"
+copyNote: "."
+eleventyExcludeFromCollections: true
+---
+
+<section class="mhead">
+  <div class="wrap">
+    <span class="eyebrow">Book With Us</span>
+    <h1>Party Inquiry</h1>
+    <p>Happy Valley hosts big groups and private parties. Pick how you want to celebrate, send us the details, and we'll get back to you with pricing and availability.</p>
+  </div>
+</section>
+
+<!-- OPTIONS -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Three Ways to Party</div>
+      <h2>Pick Your Setup</h2>
+      <p>Not sure which fits? Tell us your group size and vibe in the form and we'll help you choose.</p>
+    </div>
+    <div class="opts">
+      <div class="opt"><div class="band b1"></div><div class="in">
+        <div class="num">Option 1</div>
+        <h3>The Full Courtyard</h3>
+        <p>Full access to the courtyard and Happy Huts, closed to the public for your group. Other guests still walk through the courtyard to enter the building.</p>
+        <div class="note">Not available in winter months</div>
+      </div></div>
+      <div class="opt"><div class="band b2"></div><div class="in">
+        <div class="num">Option 2</div>
+        <h3>The Whole Place</h3>
+        <p>Reserve the entire establishment — the arcade, the bar, and the full courtyard. We close to the public for the duration of your event.</p>
+        <div class="note">Total buyout · biggest groups</div>
+      </div></div>
+      <div class="opt"><div class="band b3"></div><div class="in">
+        <div class="num">Option 3</div>
+        <h3>Just Some Tables</h3>
+        <p>Reserve a few tables for your guests — inside, outside, or both — and run everything on a single tab. Easiest way to bring a crew.</p>
+        <div class="note">We stay open to the public</div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="block">
+  <div class="wrap">
+    <div class="form-shell">
+      <form class="card" id="partyForm" onsubmit="return sendInquiry(event)">
+        <div class="row">
+          <div class="field"><label>First Name <span class="req">*</span></label><input id="fn" required></div>
+          <div class="field"><label>Last Name <span class="req">*</span></label><input id="ln" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>E-mail <span class="req">*</span></label><input id="em" type="email" required></div>
+          <div class="field"><label>Phone</label><input id="ph" type="tel"></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Date <span class="req">*</span></label><input id="dt" type="date" required></div>
+          <div class="field"><label>Number of Guests <span class="req">*</span></label><input id="gs" type="number" min="1" placeholder="e.g. 25" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Start Time</label>
+            <select id="st">
+              <option>Flexible</option>
+              <option>12:00 PM</option><option>12:30 PM</option><option>1:00 PM</option><option>1:30 PM</option>
+              <option>2:00 PM</option><option>2:30 PM</option><option>3:00 PM</option><option>3:30 PM</option>
+              <option>4:00 PM</option><option>4:30 PM</option><option>5:00 PM</option><option>5:30 PM</option>
+              <option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option>
+              <option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option>
+            </select>
+          </div>
+          <div class="field"><label>Duration</label>
+            <select id="du"><option>2 hours</option><option>3 hours</option><option>4 hours</option><option>Not sure yet</option></select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Which setup are you after? <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio"><input type="radio" name="opt" value="Option 1 — Full Courtyard" required><span><span class="rt">Option 1 — The Full Courtyard</span><span class="rd">Courtyard &amp; Happy Huts, closed to the public (not available in winter).</span></span></label>
+            <label class="radio"><input type="radio" name="opt" value="Option 2 — Whole Establishment"><span><span class="rt">Option 2 — The Whole Place</span><span class="rd">Full buyout of the arcade, bar, and courtyard.</span></span></label>
+            <label class="radio"><input type="radio" name="opt" value="Option 3 — Tables Only"><span><span class="rt">Option 3 — Just Some Tables</span><span class="rd">A few reserved tables on a single tab; we stay open.</span></span></label>
+          </div>
+        </div>
+        <div class="field"><label>Tell us about your event!</label><textarea id="msg" placeholder="Occasion, must-haves, food/drink ideas, questions..."></textarea></div>
+        <div class="submit-row">
+          <button class="btn primary" type="submit">Send Inquiry</button>
+          <span class="small">Opens your email to send to our team — nothing is sent automatically.</span>
+        </div>
+      </form>
+
+      <aside>
+        <div class="card">
+          <h4>Prefer to Reach Out?</h4>
+          <p>Email us directly and we'll take it from there:</p>
+          <p><a class="mail" href="mailto:fallon@happyvalleybeacon.com">fallon@happyvalleybeacon.com</a></p>
+          <p style="margin-top:14px">Or call the bar:</p>
+          <p class="big">845-440-3049</p>
+          <p style="margin-top:14px">296 Main Street<br>Beacon, NY 12508</p>
+        </div>
+        <div class="card">
+          <h4>Hours</h4>
+          <div class="hrs"><b>Sun–Thu</b><span>Noon – 11pm</span></div>
+          <div class="hrs" style="border:none"><b>Fri–Sat</b><span>Noon – 1:30am</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

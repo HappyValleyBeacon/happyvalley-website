@@ -1,0 +1,20 @@
+<script>
+  function sendInquiry(e){
+    e.preventDefault();
+    var g=function(id){return (document.getElementById(id)||{}).value||'';};
+    var opt=(document.querySelector('input[name=opt]:checked')||{}).value||'(not selected)';
+    var subject='Party Inquiry — '+g('fn')+' '+g('ln')+' — '+g('dt');
+    var body=
+      'Name: '+g('fn')+' '+g('ln')+'\n'+
+      'Email: '+g('em')+'\n'+
+      'Phone: '+g('ph')+'\n'+
+      'Date: '+g('dt')+'\n'+
+      'Start Time: '+g('st')+'\n'+
+      'Duration: '+g('du')+'\n'+
+      'Guests: '+g('gs')+'\n'+
+      'Setup: '+opt+'\n\n'+
+      'About the event:\n'+g('msg')+'\n';
+    window.open('mailto:fallon@happyvalleybeacon.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body),'_blank');
+    return false;
+  }
+</script>

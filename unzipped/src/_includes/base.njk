@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% set cleanUrl = "/" if activeNav == "home" else permalink | replace(".html","") %}
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ site.url }}{{ cleanUrl }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Happy Valley Arcade Bar">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ site.url }}{{ cleanUrl }}">
+<meta property="og:image" content="{{ site.og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The floor at Happy Valley Arcade Bar in Beacon, NY">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.og_image }}">
+<meta name="theme-color" content="#ffe4d6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Monoton&family=Bungee&display=swap" rel="stylesheet">
+{% include "styles/" + activeNav + ".html" %}
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="{% if activeNav == 'home' %}#top{% else %}/index.html{% endif %}"><img src="/happy-valley-logo.png" alt="Happy Valley logo"><span>HAPPY&nbsp;VALLEY</span></a>
+    <nav class="links">
+      {%- for n in nav %}
+      <a{% if n.cta %} class="navcta{% if n.key == activeNav %} active{% endif %}"{% elif n.key == activeNav %} class="active"{% endif %} href="{% if n.key == 'home' and activeNav == 'home' %}#top{% else %}{{ n.url }}{% endif %}">{{ n.label }}</a>
+      {%- endfor %}
+    </nav>
+    <button class="menu-btn">☰</button>
+  </div>
+</header>
+
+{{ content | safe }}
+
+<footer{% if activeNav == 'home' %} id="store"{% endif %}>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="/index.html"><img src="/happy-valley-logo.png" alt="Happy Valley logo"><span>HAPPY&nbsp;VALLEY</span></a>
+        <p>{{ site.tagline }}</p>
+        <p><a href="{{ site.directions }}" target="_blank" rel="noopener">{{ site.address }}</a></p>
+        <p><a href="tel:{{ site.phone_tel }}">{{ site.phone }}</a> · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <div class="social">
+          <a href="{{ site.instagram }}" target="_blank" rel="noopener" aria-label="Happy Valley on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.07-1 .05-1.6.2-1.9.34-.5.2-.8.4-1.2.7-.3.4-.5.7-.7 1.2-.1.3-.3.9-.3 1.9C3 9.5 3 9.9 3 13s0 3.5.1 4.8c0 1 .2 1.6.3 1.9.2.5.4.8.7 1.2.4.3.7.5 1.2.7.3.1.9.3 1.9.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1 0 1.6-.2 1.9-.3.5-.2.8-.4 1.2-.7.3-.4.5-.7.7-1.2.1-.3.3-.9.3-1.9.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c0-1-.2-1.6-.3-1.9-.2-.5-.4-.8-.7-1.2-.4-.3-.7-.5-1.2-.7-.3-.1-.9-.3-1.9-.3C15.5 4 15.1 4 12 4z"/><path d="M12 7.1a4.9 4.9 0 100 9.8 4.9 4.9 0 000-9.8zm0 8.1a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4z"/><circle cx="17.1" cy="6.9" r="1.15"/></svg><span>Instagram</span></a>
+          <a href="{{ site.tiktok }}" target="_blank" rel="noopener" aria-label="Happy Valley on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 2h-3.1v13.1a2.6 2.6 0 11-2.6-2.6c.24 0 .47.03.69.1V9.4a5.9 5.9 0 00-.69-.04A5.7 5.7 0 1016.9 15V8.9a7 7 0 004.1 1.32V7.06a4.1 4.1 0 01-4.1-4.1V2z"/></svg><span>TikTok</span></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/index.html">Home</a>
+        <a href="/games-color.html">Games</a>
+        <a href="/menu-color.html">Menu</a>
+        <a href="/events-color.html">Events</a>
+        <a href="/pics-color.html">Pics</a>
+      </div>
+      <div>
+        <h4>More</h4>
+        <a href="/store-color.html">Store</a>
+        <a href="{{ site.gift_cards_url }}">Gift Cards</a>
+        <a href="/party-color.html">Party Inquiry</a>
+        <a href="/mug-color.html">Mug Club</a>
+      </div>
+    </div>
+    <div class="copy">{{ site.copyright }}{{ copyNote | safe }}</div>
+  </div>
+</footer>
+
+{% include "tail/" + activeNav + ".html" %}
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'), nav=document.querySelector('nav.links');
+  if(!btn||!nav)return;
+  btn.setAttribute('aria-label','Menu');
+  btn.setAttribute('aria-expanded','false');
+  function set(open){
+    nav.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.innerHTML=open?'&#10005;':'&#9776;';
+  }
+  btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();set(!nav.classList.contains('open'));});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){
+    if(nav.classList.contains('open')&&!nav.contains(e.target)&&!btn.contains(e.target))set(false);
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open'))set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>860&&nav.classList.contains('open'))set(false);});
+})();
+</script>
+</body>
+</html>

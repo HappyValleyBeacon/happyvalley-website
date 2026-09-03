@@ -1,0 +1,67 @@
+intro: 30 arcade cabinets and pinball machines on the floor. Grab a drink, pick a game, and hit start. The lineup rotates, so there's always something new.
+cabinets_heading: Arcade Cabinets
+cabinets_note: From golden-age classics to modern hits.
+cabinets:
+- name: Space Invaders
+  year: '''78'
+- name: Pac-Man
+  year: '''80'
+- name: Centipede
+  year: '''81'
+- name: Donkey Kong
+  year: '''81'
+- name: Frogger
+  year: '''81'
+- name: The Simpsons
+  year: '''91'
+- name: Mortal Kombat II
+  year: '''93'
+- name: Street Fighter II
+  year: '''93'
+- name: Cruis'n USA
+  year: '''94'
+- name: 'NBA Jam: Tournament Ed.'
+  year: '''94'
+- name: 'Area 51: Site 4'
+  year: '''98'
+- name: Gauntlet Legends
+  year: '''98'
+- name: Dance Dance Revolution Extreme
+  year: '''02'
+- name: Fix-It Felix Jr.
+  year: '''12'
+- name: Killer Queen
+  year: '''13'
+- name: KungFu Kickball
+  year: '''18'
+- name: Black Emperor
+  year: '''19'
+- name: Action Claw
+  year: '''87'
+- name: Valley
+  year: '''25'
+neogeo_title: Neo Geo 4-Slot
+neogeo:
+- name: Metal Slug 3
+  year: '''00'
+- name: King of the Monsters 2
+  year: '''92'
+- name: Bust-A-Move
+  year: '''94'
+- name: Neo Bomberman
+  year: '''97'
+pinball_heading: Pinball
+pinball_note: A rotating row of silver-ball favorites, old and brand new.
+pinball:
+- name: Jurassic Park
+  year: '1993'
+- name: Jaws
+  year: '2024'
+- name: Godzilla — 70th Anniversary
+  year: '2024'
+- name: King Kong
+  year: '2025'
+- name: Pokémon
+  year: '2026'
+- name: Sonic the Hedgehog
+  year: '2026'
