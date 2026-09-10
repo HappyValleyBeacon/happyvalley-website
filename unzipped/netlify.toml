@@ -4,3 +4,13 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/mug-color"
+  to = "/mugclub"
+  status = 301
+
+[[redirects]]
+  from = "/mug-color.html"
+  to = "/mugclub"
+  status = 301
