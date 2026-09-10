@@ -4,5 +4,5 @@
 - {key: events, label: Events,        url: /events-color.html}
 - {key: pics,   label: Pics,          url: /pics-color.html}
 - {key: store,  label: Store,         url: /store-color.html}
-- {key: mug,    label: "Mug Club",    url: /mug-color.html}
+- {key: mug,    label: "Mug Club",    url: /mugclub.html}
 - {key: party,  label: "Party Inquiry", url: /party-color.html, cta: true}
