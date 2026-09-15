@@ -155,20 +155,6 @@ collections:
           - {label: Eyebrow, name: eyebrow, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Intro paragraph, name: intro, widget: text}
-          - label: Featured weekly event(s)
-            name: featured
-            widget: list
-            label_singular: Featured event
-            summary: "{{fields.title}}"
-            fields:
-              - {label: Badge (top-left on photo), name: badge, widget: string}
-              - {label: Small tag above title, name: tag, widget: string}
-              - {label: Title, name: title, widget: string}
-              - {label: When, name: when, widget: string}
-              - {label: Description, name: description, widget: text}
-              - {label: Photo, name: photo, widget: image}
-              - {label: Button label, name: cta_label, widget: string}
-              - {label: Button link, name: cta_url, widget: string}
           - {label: "Rotating section heading", name: rotating_heading, widget: string}
           - {label: "Rotating section note", name: rotating_note, widget: string}
           - label: Rotating & special events
@@ -201,6 +187,19 @@ collections:
               - {label: Description, name: description, widget: text}
               - {label: Button label, name: cta_label, widget: string}
               - {label: Button link, name: cta_url, widget: string}
+          - {label: "Flyers section heading", name: flyers_heading, widget: string}
+          - {label: "Flyers section note", name: flyers_note, widget: string}
+          - label: Flyers
+            name: flyers
+            widget: list
+            required: false
+            label_singular: Flyer
+            summary: "{{fields.caption}}"
+            hint: "Just a photo. Add one for each upcoming flyer, no need to fill in anything else unless you want a caption."
+            fields:
+              - {label: Photo, name: image, widget: image}
+              - {label: Caption (optional), name: caption, widget: string, required: false}
+              - {label: Link (optional), name: link, widget: string, required: false, hint: "Only if this flyer should link somewhere, like a ticket page."}
           - label: "Follow / contact block"
             name: follow
             widget: object
