@@ -1,0 +1,107 @@
+---
+layout: "base.njk"
+title: "Events & Game Nights | Happy Valley Arcade Bar, Beacon NY"
+activeNav: "events"
+description: "Trivia, arcade tournaments, karaoke and comedy at our Beacon arcade bar, plus the string-lit courtyard for groups."
+permalink: "/events-color.html"
+copyNote: ". Event dates subject to change; check Instagram."
+eleventyExcludeFromCollections: true
+---
+
+<section class="mhead">
+  <div class="wrap">
+    <span class="eyebrow">{{ events.eyebrow }}</span>
+    <h1>{{ events.heading }}</h1>
+    <p>{{ events.intro }}</p>
+  </div>
+</section>
+
+<!-- FEATURED WEEKLY -->
+{% for item in events.featured %}
+<section class="block">
+  <div class="wrap">
+    <div class="feature">
+      <div class="photo" style="background-image:url({{ item.photo }})">
+        <span class="badge">{{ item.badge }}</span>
+      </div>
+      <div class="text">
+        <div class="tag">{{ item.tag }}</div>
+        <h3>{{ item.title }}</h3>
+        <div class="when">{{ item.when }}</div>
+        <p>{{ item.description }}</p>
+        <a class="btn primary" href="{{ item.cta_url }}">{{ item.cta_label }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<!-- ROTATING & SPECIAL -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="tag">Rotating &amp; Special</div>
+      <h2>{{ events.rotating_heading }}</h2>
+      <p>{{ events.rotating_note }}</p>
+    </div>
+    <div class="ev-grid">
+      {% for item in events.rotating %}
+      <div class="ev-card"><div class="band b{{ (loop.index0 % 4) + 1 }}"></div><div class="in">
+        <h3>{{ item.title }}</h3>
+        <div class="when">{{ item.when }}</div>
+        <p>{{ item.description }}</p>
+      </div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- COURTYARD BOOKING -->
+<section class="block">
+  <div class="wrap split">
+    <div class="art" style="background-image:url({{ events.courtyard.image }})"></div>
+    <div>
+      <h3>{{ events.courtyard.title }}</h3>
+      <p>{{ events.courtyard.description }}</p>
+      <div class="pill-list">
+        {% for pill in events.courtyard.pills %}
+        <span class="pill">{{ pill }}</span>
+        {% endfor %}
+      </div>
+      <a class="btn primary" href="{{ events.courtyard.cta_url }}">{{ events.courtyard.cta_label }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVATE BUYOUT -->
+<section class="block">
+  <div class="wrap">
+    <div class="band-cta">
+      <h3>{{ events.private_buyout.title }}</h3>
+      <p>{{ events.private_buyout.description }}</p>
+      <a class="btn solid" href="{{ events.private_buyout.cta_url }}">{{ events.private_buyout.cta_label }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOLLOW FOR DATES -->
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:32px">
+      <div class="tag">Never Miss a Night</div>
+      <h2>Get the Dates</h2>
+    </div>
+    <div class="follow">
+      <div class="cell">
+        <div class="k">Follow Along</div>
+        <div class="v"><a href="{{ events.follow.instagram_url }}" target="_blank" rel="noopener" style="color:inherit">{{ events.follow.instagram_handle }}</a></div>
+        <p>All event dates, lineups, and last-minute pop-ups are posted on Instagram.</p>
+      </div>
+      <div class="cell">
+        <div class="k">Call the Bar</div>
+        <div class="v">{{ events.follow.phone }}</div>
+        <p>{{ events.follow.phone_note }}</p>
+      </div>
+    </div>
+  </div>
+</section>

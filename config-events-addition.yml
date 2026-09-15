@@ -1,0 +1,65 @@
+  - name: events
+    label: Events
+    files:
+      - name: events
+        label: Events page
+        file: unzipped/src/_data/events.yaml
+        description: The Events page — the weekly feature, rotating events, courtyard booking and the follow section.
+        fields:
+          - {label: Eyebrow, name: eyebrow, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Intro paragraph, name: intro, widget: text}
+          - label: Featured weekly event(s)
+            name: featured
+            widget: list
+            label_singular: Featured event
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Badge (top-left on photo), name: badge, widget: string}
+              - {label: Small tag above title, name: tag, widget: string}
+              - {label: Title, name: title, widget: string}
+              - {label: When, name: when, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Button label, name: cta_label, widget: string}
+              - {label: Button link, name: cta_url, widget: string}
+          - {label: "Rotating section heading", name: rotating_heading, widget: string}
+          - {label: "Rotating section note", name: rotating_note, widget: string}
+          - label: Rotating & special events
+            name: rotating
+            widget: list
+            label_singular: Event
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: When, name: when, widget: string}
+              - {label: Description, name: description, widget: text}
+          - label: Courtyard booking block
+            name: courtyard
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Photo, name: image, widget: image}
+              - label: Pills
+                name: pills
+                widget: list
+                label_singular: Pill
+              - {label: Button label, name: cta_label, widget: string}
+              - {label: Button link, name: cta_url, widget: string}
+          - label: Private buyout block
+            name: private_buyout
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Button label, name: cta_label, widget: string}
+              - {label: Button link, name: cta_url, widget: string}
+          - label: "Follow / contact block"
+            name: follow
+            widget: object
+            fields:
+              - {label: Instagram handle (shown), name: instagram_handle, widget: string}
+              - {label: Instagram URL, name: instagram_url, widget: string}
+              - {label: Phone, name: phone, widget: string}
+              - {label: Note under phone, name: phone_note, widget: string}
