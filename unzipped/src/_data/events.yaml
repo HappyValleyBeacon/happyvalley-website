@@ -1,50 +1,75 @@
-eyebrow: "What's On"
-heading: "Events"
-intro: "Trivia, karaoke, comedy, and tournaments all season long. One-off nights and special dates drop on Instagram — follow along or give us a call."
-
-rotating_heading: "More Ways to Play"
-rotating_note: "These pop up throughout the season. Dates and lineups are announced on Instagram — follow us so you don't miss one."
+eyebrow: What's On
+heading: Events
+intro: Trivia, karaoke, comedy, and tournaments all season long. One-off nights and special dates drop on Instagram — follow along or give us a call.
+rotating_heading: More Ways to Play
+rotating_note: These pop up throughout the season. Dates and lineups are announced on Instagram — follow us so you don't miss one.
 rotating:
-  - title: "Geeks Who Drink Trivia"
-    when: "Tuesdays · 6:30pm"
-    description: "Come early, grab a seat, and show your inner geek. Free to play, drinks flowing, and bragging rights on the line every week."
-  - title: "Karaoke Dance Party"
-    when: "Dates on Instagram"
-    description: "Grab the mic and the dance floor. Belt your heart out with a drink in hand and the whole bar backing you up."
-  - title: "Comedy at the 'Cade"
-    when: "Select Nights · Ticketed"
-    description: "Stand-up among the cabinets. Doors early, show after — grab tickets and a table before they fill up."
-  - title: "Arcade Tournaments"
-    when: "Dates on Instagram"
-    description: "Bracket nights on the floor — pinball and fighter showdowns with prizes for the top scores."
-  - title: "Live DJs & Pop-Ups"
-    when: "Weekends · Rotating"
-    description: "Late-night sets, guest pop-ups, and one-off collabs that turn the floor up on Friday and Saturday nights."
-
+  - title: Geeks Who Drink Trivia
+    when: Tuesdays · 6:30pm
+    description: Come early, grab a seat, and show your inner geek. Free to play, drinks flowing, and bragging rights on the line every week.
+  - title: Karaoke Dance Party
+    when: Dates on Instagram
+    description: Grab the mic and the dance floor. Belt your heart out with a drink in hand and the whole bar backing you up.
+  - title: Comedy at the 'Cade
+    when: Select Nights · Ticketed
+    description: Stand-up among the cabinets. Doors early, show after — grab tickets and a table before they fill up.
+  - title: Arcade Tournaments
+    when: Dates on Instagram
+    description: Bracket nights on the floor — pinball and fighter showdowns with prizes for the top scores.
+  - title: Live DJs & Pop-Ups
+    when: Weekends · Rotating
+    description: Late-night sets, guest pop-ups, and one-off collabs that turn the floor up on Friday and Saturday nights.
 courtyard:
-  title: "Book the Courtyard"
-  description: "Out front on Main Street, our string-lit Happy Huts are cozy and made for groups. Reserve a hut for a birthday, a team night, or just a better seat to the action."
-  image: "https://static.wixstatic.com/media/90962f_a82158faf5e844c5ac67bb431ff5f4da~mv2.jpg/v1/fill/w_720,h_800,al_c,q_85/90962f_a82158faf5e844c5ac67bb431ff5f4da~mv2.jpg"
+  title: Book the Courtyard
+  description: Out front on Main Street, our string-lit Happy Huts are cozy and made for groups. Reserve a hut for a birthday, a team night, or just a better seat to the action.
+  image: https://static.wixstatic.com/media/90962f_a82158faf5e844c5ac67bb431ff5f4da~mv2.jpg/v1/fill/w_720,h_800,al_c,q_85/90962f_a82158faf5e844c5ac67bb431ff5f4da~mv2.jpg
   pills:
-    - "Happy Huts"
-    - "Groups & Birthdays"
-    - "Main Street Views"
-    - "Right by the Bar"
-  cta_label: "Party Inquiry"
-  cta_url: "/party-color.html"
-
+    - Happy Huts
+    - Groups & Birthdays
+    - Main Street Views
+    - Right by the Bar
+  cta_label: Party Inquiry
+  cta_url: /party-color.html
 private_buyout:
-  title: "Throw a Private Event"
-  description: "Birthdays, corporate nights, or a full buyout of the whole arcade — tell us what you're planning and we'll build the night around it."
-  cta_label: "Book a Party"
-  cta_url: "/party-color.html"
-
-flyers_heading: "Flyers"
-flyers_note: "Whatever's coming up, straight from the door."
-flyers: []
-
+  title: Throw a Private Event
+  description: Birthdays, corporate nights, or a full buyout of the whole arcade — tell us what you're planning and we'll build the night around it.
+  cta_label: Book a Party
+  cta_url: /party-color.html
+flyers_heading: Flyers
+flyers_note: Whatever's coming up, straight from the door.
+flyers:
+  - image: /uploads/IMG_1716.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1714.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1721.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1722.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1718.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1717.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1715.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1720.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1724.jpeg
+    caption: ''
+    link: ''
+  - image: /uploads/IMG_1719.jpeg
+    caption: ''
+    link: ''
 follow:
-  instagram_handle: "@happyvalleybeacon"
-  instagram_url: "https://www.instagram.com/happyvalleybeacon/"
-  phone: "845-440-3049"
-  phone_note: "Questions about an event or booking? Give us a ring — noon to close."
+  instagram_handle: '@happyvalleybeacon'
+  instagram_url: https://www.instagram.com/happyvalleybeacon/
+  phone: 845-440-3049
+  phone_note: Questions about an event or booking? Give us a ring — noon to close.
