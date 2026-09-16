@@ -17,7 +17,7 @@ eleventyExcludeFromCollections: true
     <div class="place">30 arcade cabinets &amp; pinball, cocktails &amp; draft beer on Main Street</div>
     <div class="cta-row">
       <a class="btn primary" href="https://arcade.valley.games/">▶ Play the Web Arcade</a>
-      <a class="btn ghost" href="/party-color.html">Party Inquiry</a>
+      <a class="btn ghost" href="/party.html">Party Inquiry</a>
     </div>
   </div>
 </section>
@@ -59,7 +59,7 @@ eleventyExcludeFromCollections: true
           <div class="mi"><b>Rosemary's Baby</b><span>$15</span></div>
           <div class="mi"><b>Beer Flight — pick any four</b><span>$15</span></div>
         </div>
-        <a class="btn primary" href="/menu-color.html">See the Full Menu</a>
+        <a class="btn primary" href="/menu.html">See the Full Menu</a>
       </div>
     </div>
   </div>
@@ -79,7 +79,7 @@ eleventyExcludeFromCollections: true
         <span class="pill">Comedy at the 'Cade</span>
         <span class="pill">Private Buyouts</span>
       </div>
-      <a class="btn primary" href="/party-color.html">Party Inquiry</a>
+      <a class="btn primary" href="/party.html">Party Inquiry</a>
     </div>
   </div>
 </section>
@@ -94,7 +94,7 @@ eleventyExcludeFromCollections: true
     </div>
     <div class="gal">
       {%- for ph in photos_home.gallery %}
-      <a data-full="{{ ph.image | full }}" aria-label="{{ ph.caption }}"{% if ph.size != 'square' %} class="{{ ph.size }}"{% endif %} href="/pics-color.html" style="background-image:url({{ ph.image | thumb(ph.size, true) }})"></a>
+      <a data-full="{{ ph.image | full }}" aria-label="{{ ph.caption }}"{% if ph.size != 'square' %} class="{{ ph.size }}"{% endif %} href="/pics.html" style="background-image:url({{ ph.image | thumb(ph.size, true) }})"></a>
       {%- endfor %}
     </div>
   </div>
@@ -137,7 +137,7 @@ eleventyExcludeFromCollections: true
       <p>Birthdays, wedding parties, full buyouts... tell us what you're planning and we'll make it happen.</p>
     </div>
     <div class="cta-row">
-      <a class="btn primary" href="/party-color.html">Book a Party</a>
+      <a class="btn primary" href="/party.html">Book a Party</a>
     </div>
   </div>
 </section>
