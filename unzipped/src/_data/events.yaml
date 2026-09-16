@@ -1,4 +1,5 @@
 heading: Events
+subheading: Your neighborhood hangout, with something always going on.
 flyers:
   - image: /uploads/IMG_1716.jpeg
     caption: ''
@@ -25,7 +26,7 @@ private_buyout:
   title: Throw a Private Event
   description: Birthdays, wedding party, or a full buyout of the whole arcade, tell us what you're planning and we'll build the night around it.
   cta_label: Book a Party
-  cta_url: /party-color.html
+  cta_url: /party.html
 follow:
   instagram_handle: '@happyvalleybeacon'
   instagram_url: https://www.instagram.com/happyvalleybeacon/
