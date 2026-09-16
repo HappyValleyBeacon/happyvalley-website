@@ -14,3 +14,63 @@
   from = "/mug-color.html"
   to = "/mugclub"
   status = 301
+
+[[redirects]]
+  from = "/games-color"
+  to = "/games"
+  status = 301
+
+[[redirects]]
+  from = "/games-color.html"
+  to = "/games"
+  status = 301
+
+[[redirects]]
+  from = "/menu-color"
+  to = "/menu"
+  status = 301
+
+[[redirects]]
+  from = "/menu-color.html"
+  to = "/menu"
+  status = 301
+
+[[redirects]]
+  from = "/events-color"
+  to = "/events"
+  status = 301
+
+[[redirects]]
+  from = "/events-color.html"
+  to = "/events"
+  status = 301
+
+[[redirects]]
+  from = "/pics-color"
+  to = "/pics"
+  status = 301
+
+[[redirects]]
+  from = "/pics-color.html"
+  to = "/pics"
+  status = 301
+
+[[redirects]]
+  from = "/store-color"
+  to = "/store"
+  status = 301
+
+[[redirects]]
+  from = "/store-color.html"
+  to = "/store"
+  status = 301
+
+[[redirects]]
+  from = "/party-color"
+  to = "/party"
+  status = 301
+
+[[redirects]]
+  from = "/party-color.html"
+  to = "/party"
+  status = 301
