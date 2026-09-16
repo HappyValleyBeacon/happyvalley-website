@@ -1,8 +1,8 @@
 - {key: home,   label: Home,          url: /index.html}
-- {key: games,  label: Games,         url: /games-color.html}
-- {key: menu,   label: Menu,          url: /menu-color.html}
-- {key: events, label: Events,        url: /events-color.html}
-- {key: pics,   label: Pics,          url: /pics-color.html}
-- {key: store,  label: Store,         url: /store-color.html}
+- {key: games,  label: Games,         url: /games.html}
+- {key: menu,   label: Menu,          url: /menu.html}
+- {key: events, label: Events,        url: /events.html}
+- {key: pics,   label: Pics,          url: /pics.html}
+- {key: store,  label: Store,         url: /store.html}
 - {key: mug,    label: "Mug Club",    url: /mugclub.html}
-- {key: party,  label: "Party Inquiry", url: /party-color.html, cta: true}
+- {key: party,  label: "Party Inquiry", url: /party.html, cta: true}
