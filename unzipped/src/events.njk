@@ -42,9 +42,10 @@ eleventyExcludeFromCollections: true
   .flyer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
   .flyer-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(36,20,54,.07);transition:.25s;display:block}
   .flyer-card:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(123,63,242,.16)}
-  .flyer-card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .flyer-card img{width:100%;max-height:520px;object-fit:contain;background:#f4f1f8;display:block}
   .flyer-card .cap{padding:14px 16px;color:var(--muted);font-size:14px}
-  @media(max-width:860px){.flyer-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
+  @media(max-width:860px){.flyer-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}}
+  @media(max-width:520px){.flyer-grid{grid-template-columns:1fr}}
 </style>
 <section class="block">
   <div class="wrap">
