@@ -41,33 +41,6 @@ flyers:
   - image: /uploads/IMG_1716.jpeg
     caption: ''
     link: ''
-  - image: /uploads/IMG_1714.jpeg
-    caption: ''
-    link: ''
-  - image: /uploads/IMG_1721.jpeg
-    caption: ''
-    link: ''
-  - image: /uploads/IMG_1722.jpeg
-    caption: ''
-    link: ''
-  - image: /uploads/IMG_1718.jpeg
-    caption: ''
-    link: ''
-  - image: /uploads/IMG_1717.jpeg
-    caption: ''
-    link: ''
-  - image: /uploads/IMG_1715.jpeg
-    caption: ''
-    link: ''
-  - image: /uploads/IMG_1720.jpeg
-    caption: ''
-    link: ''
-  - image: /uploads/IMG_1724.jpeg
-    caption: ''
-    link: ''
-  - image: /uploads/IMG_1719.jpeg
-    caption: ''
-    link: ''
 follow:
   instagram_handle: '@happyvalleybeacon'
   instagram_url: https://www.instagram.com/happyvalleybeacon/
