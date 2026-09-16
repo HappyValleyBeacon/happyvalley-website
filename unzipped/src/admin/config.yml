@@ -153,6 +153,7 @@ collections:
         description: The Events page — the page heading, the flyer photos, the private event block and the follow section.
         fields:
           - {label: Heading, name: heading, widget: string}
+          - {label: Subtitle under the heading, name: subheading, widget: string, required: false}
           - label: Flyers
             name: flyers
             widget: list
