@@ -3,7 +3,7 @@ layout: "base.njk"
 title: "Events & Game Nights | Happy Valley Arcade Bar, Beacon NY"
 activeNav: "events"
 description: "What's coming up at Happy Valley: trivia, karaoke, comedy, tournaments and more."
-permalink: "/events-color.html"
+permalink: "/events.html"
 copyNote: ". Event dates subject to change; check Instagram."
 eleventyExcludeFromCollections: true
 ---
@@ -11,14 +11,15 @@ eleventyExcludeFromCollections: true
 <section class="mhead">
   <div class="wrap">
     <h1>{{ events.heading }}</h1>
+    {% if events.subheading %}<p>{{ events.subheading }}</p>{% endif %}
   </div>
 </section>
 
 {% if events.flyers and events.flyers.length %}
 <!-- FLYERS -->
 <style>
-  .flyer-hero{display:block;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 40px rgba(36,20,54,.09);cursor:pointer;background:#f4f1f8;margin-bottom:22px}
-  .flyer-hero img{width:100%;max-height:640px;object-fit:contain;display:block;background:#f4f1f8}
+  .flyer-hero{display:flex;justify-content:center;cursor:pointer;margin-bottom:22px}
+  .flyer-hero img{width:auto;max-width:100%;max-height:640px;display:block;border-radius:24px;border:1px solid var(--line);box-shadow:0 16px 40px rgba(36,20,54,.09)}
   .flyer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
   .flyer-thumb{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 10px 24px rgba(36,20,54,.07);transition:.2s;cursor:pointer}
   .flyer-thumb:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(123,63,242,.16)}
