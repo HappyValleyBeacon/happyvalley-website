@@ -1,20 +1,23 @@
 <script>
   function sendInquiry(e){
     e.preventDefault();
+    var form=document.getElementById('partyForm');
+    var btn=document.getElementById('sendBtn');
+    var note=document.getElementById('formNote');
     var g=function(id){return (document.getElementById(id)||{}).value||'';};
-    var opt=(document.querySelector('input[name=opt]:checked')||{}).value||'(not selected)';
-    var subject='Party Inquiry — '+g('fn')+' '+g('ln')+' — '+g('dt');
-    var body=
-      'Name: '+g('fn')+' '+g('ln')+'\n'+
-      'Email: '+g('em')+'\n'+
-      'Phone: '+g('ph')+'\n'+
-      'Date: '+g('dt')+'\n'+
-      'Start Time: '+g('st')+'\n'+
-      'Duration: '+g('du')+'\n'+
-      'Guests: '+g('gs')+'\n'+
-      'Setup: '+opt+'\n\n'+
-      'About the event:\n'+g('msg')+'\n';
-    window.open('mailto:sophie@happyvalleybeacon.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body),'_blank');
+    var subject='Party Inquiry: '+g('fn')+' '+g('ln')+' ('+g('dt')+', '+g('gs')+' guests)';
+    document.getElementById('subj').value=subject;
+    btn.disabled=true; btn.textContent='Sending...';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
+      .then(function(r){
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        form.innerHTML='<div style="text-align:center;padding:40px 10px"><h3 style="font-family:Bungee,sans-serif;font-size:28px;margin-bottom:12px;background:linear-gradient(90deg,#7b3ff2,#ff2fb0);-webkit-background-clip:text;background-clip:text;color:transparent">Thanks, we got it!</h3><p style="color:#6b5c86">Your inquiry is on its way to our events team. We\'ll get back to you by email soon.</p></div>';
+        form.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+      .catch(function(){
+        btn.disabled=false; btn.textContent='Send Inquiry';
+        note.innerHTML='Something went wrong sending that. Please email <a href="mailto:sophie@happyvalleybeacon.com" style="color:#ff2fb0;font-weight:600">sophie@happyvalleybeacon.com</a> or call 845-440-3049.';
+      });
     return false;
   }
 </script>
