@@ -51,22 +51,25 @@ eleventyExcludeFromCollections: true
 <section class="block">
   <div class="wrap">
     <div class="form-shell">
-      <form class="card" id="partyForm" onsubmit="return sendInquiry(event)">
+      <form class="card" id="partyForm" name="party-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return sendInquiry(event)">
+        <input type="hidden" name="form-name" value="party-inquiry">
+        <input type="hidden" name="subject" id="subj" value="New party inquiry">
+        <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
         <div class="row">
-          <div class="field"><label>First Name <span class="req">*</span></label><input id="fn" required></div>
-          <div class="field"><label>Last Name <span class="req">*</span></label><input id="ln" required></div>
+          <div class="field"><label>First Name <span class="req">*</span></label><input id="fn" name="first_name" required></div>
+          <div class="field"><label>Last Name <span class="req">*</span></label><input id="ln" name="last_name" required></div>
         </div>
         <div class="row">
-          <div class="field"><label>E-mail <span class="req">*</span></label><input id="em" type="email" required></div>
-          <div class="field"><label>Phone</label><input id="ph" type="tel"></div>
+          <div class="field"><label>E-mail <span class="req">*</span></label><input id="em" name="email" type="email" required></div>
+          <div class="field"><label>Phone</label><input id="ph" name="phone" type="tel"></div>
         </div>
         <div class="row">
-          <div class="field"><label>Date <span class="req">*</span></label><input id="dt" type="date" required></div>
-          <div class="field"><label>Number of Guests <span class="req">*</span></label><input id="gs" type="number" min="1" placeholder="e.g. 25" required></div>
+          <div class="field"><label>Date <span class="req">*</span></label><input id="dt" name="date" type="date" required></div>
+          <div class="field"><label>Number of Guests <span class="req">*</span></label><input id="gs" name="guests" type="number" min="1" placeholder="e.g. 25" required></div>
         </div>
         <div class="row">
           <div class="field"><label>Start Time</label>
-            <select id="st">
+            <select id="st" name="start_time">
               <option>Flexible</option>
               <option>12:00 PM</option><option>12:30 PM</option><option>1:00 PM</option><option>1:30 PM</option>
               <option>2:00 PM</option><option>2:30 PM</option><option>3:00 PM</option><option>3:30 PM</option>
@@ -76,21 +79,21 @@ eleventyExcludeFromCollections: true
             </select>
           </div>
           <div class="field"><label>Duration</label>
-            <select id="du"><option>2 hours</option><option>3 hours</option><option>4 hours</option><option>Not sure yet</option></select>
+            <select id="du" name="duration"><option>2 hours</option><option>3 hours</option><option>4 hours</option><option>Not sure yet</option></select>
           </div>
         </div>
         <div class="field">
           <label>Which setup are you after? <span class="req">*</span></label>
           <div class="radio-group">
-            <label class="radio"><input type="radio" name="opt" value="Option 1 — Full Courtyard" required><span><span class="rt">Option 1 — The Full Courtyard</span><span class="rd">Courtyard &amp; Happy Huts, closed to the public (not available in winter).</span></span></label>
-            <label class="radio"><input type="radio" name="opt" value="Option 2 — Whole Establishment"><span><span class="rt">Option 2 — The Whole Place</span><span class="rd">Full buyout of the arcade, bar, and courtyard.</span></span></label>
-            <label class="radio"><input type="radio" name="opt" value="Option 3 — Tables Only"><span><span class="rt">Option 3 — Just Some Tables</span><span class="rd">A few reserved tables on a single tab; we stay open.</span></span></label>
+            <label class="radio"><input type="radio" name="setup" value="Option 1 — Full Courtyard" required><span><span class="rt">Option 1 — The Full Courtyard</span><span class="rd">Courtyard &amp; Happy Huts, closed to the public (not available in winter).</span></span></label>
+            <label class="radio"><input type="radio" name="setup" value="Option 2 — Whole Establishment"><span><span class="rt">Option 2 — The Whole Place</span><span class="rd">Full buyout of the arcade, bar, and courtyard.</span></span></label>
+            <label class="radio"><input type="radio" name="setup" value="Option 3 — Tables Only"><span><span class="rt">Option 3 — Just Some Tables</span><span class="rd">A few reserved tables on a single tab; we stay open.</span></span></label>
           </div>
         </div>
-        <div class="field"><label>Tell us about your event!</label><textarea id="msg" placeholder="Occasion, must-haves, food/drink ideas, questions..."></textarea></div>
+        <div class="field"><label>Tell us about your event!</label><textarea id="msg" name="message" placeholder="Occasion, must-haves, food/drink ideas, questions..."></textarea></div>
         <div class="submit-row">
-          <button class="btn primary" type="submit">Send Inquiry</button>
-          <span class="small">Opens your email to send to our team — nothing is sent automatically.</span>
+          <button class="btn primary" type="submit" id="sendBtn">Send Inquiry</button>
+          <span class="small" id="formNote">Goes straight to our events team. We'll reply by email.</span>
         </div>
       </form>
 
